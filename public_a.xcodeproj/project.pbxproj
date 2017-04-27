@@ -13,6 +13,7 @@
 		3D0D39051EAD8EAB003AE7C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0D39031EAD8EAB003AE7C9 /* Main.storyboard */; };
 		3D0D39071EAD8EAB003AE7C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0D39061EAD8EAB003AE7C9 /* Assets.xcassets */; };
 		3D0D390A1EAD8EAB003AE7C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0D39081EAD8EAB003AE7C9 /* LaunchScreen.storyboard */; };
+		3D0D39141EAD8F95003AE7C9 /* TRSPublicClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D39131EAD8F95003AE7C9 /* TRSPublicClassA.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		3D0D39061EAD8EAB003AE7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D0D39091EAD8EAB003AE7C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D0D390B1EAD8EAB003AE7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D0D39121EAD8F95003AE7C9 /* TRSPublicClassA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSPublicClassA.h; sourceTree = "<group>"; };
+		3D0D39131EAD8F95003AE7C9 /* TRSPublicClassA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSPublicClassA.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		3D0D38F91EAD8EAB003AE7C9 /* public_a */ = {
 			isa = PBXGroup;
 			children = (
+				3D0D39111EAD8F10003AE7C9 /* TRSPublicAClass */,
 				3D0D38FD1EAD8EAB003AE7C9 /* AppDelegate.h */,
 				3D0D38FE1EAD8EAB003AE7C9 /* AppDelegate.m */,
 				3D0D39001EAD8EAB003AE7C9 /* ViewController.h */,
@@ -78,6 +82,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		3D0D39111EAD8F10003AE7C9 /* TRSPublicAClass */ = {
+			isa = PBXGroup;
+			children = (
+				3D0D39121EAD8F95003AE7C9 /* TRSPublicClassA.h */,
+				3D0D39131EAD8F95003AE7C9 /* TRSPublicClassA.m */,
+			);
+			path = TRSPublicAClass;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -111,7 +124,7 @@
 					3D0D38F61EAD8EAB003AE7C9 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 9A59CDXZH8;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -154,6 +167,7 @@
 				3D0D39021EAD8EAB003AE7C9 /* ViewController.m in Sources */,
 				3D0D38FF1EAD8EAB003AE7C9 /* AppDelegate.m in Sources */,
 				3D0D38FC1EAD8EAB003AE7C9 /* main.m in Sources */,
+				3D0D39141EAD8F95003AE7C9 /* TRSPublicClassA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +292,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.trs.subtree-public-a.public-a";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9e84e76b-696d-40c6-b87d-7e88ee617002";
+				PROVISIONING_PROFILE_SPECIFIER = BeiJingMobileWildID_Develop;
 			};
 			name = Debug;
 		};
@@ -285,11 +301,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9A59CDXZH8;
 				INFOPLIST_FILE = public_a/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.trs.subtree-public-a.public-a";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "02ea79b2-66b3-4d06-8f0d-972dcf9ff791";
+				PROVISIONING_PROFILE_SPECIFIER = BeiJingMobileWildID_ADHoc;
 			};
 			name = Release;
 		};
@@ -312,6 +331,7 @@
 				3D0D39101EAD8EAB003AE7C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
