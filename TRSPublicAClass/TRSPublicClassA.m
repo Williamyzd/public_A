@@ -11,5 +11,6 @@
 @implementation TRSPublicClassA
 -(void)delet{
   NSLog(@"请删除我!!!!");
+  NSLog(@"我才不闪呢,你想的美");
 }
 @end
