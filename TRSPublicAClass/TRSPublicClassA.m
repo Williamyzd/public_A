@@ -9,5 +9,7 @@
 #import "TRSPublicClassA.h"
 
 @implementation TRSPublicClassA
-
+-(void)delet{
+  NSLog(@"请删除我!!!!");
+}
 @end
